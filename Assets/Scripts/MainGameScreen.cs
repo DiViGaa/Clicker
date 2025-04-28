@@ -6,8 +6,8 @@ public class MainGameScreen : MonoBehaviour
 {
     [SerializeField] private View view;
     [SerializeField] private Button clickButton;
-    [SerializeField] private Button MenuButton;
-    [SerializeField] private Button ShopButton;
+    [SerializeField] private Button menuButton;
+    [SerializeField] private Button shopButton;
     
     public event UnityAction OnClickMenuButton;
     public event UnityAction OnClickShopButton;
@@ -21,16 +21,18 @@ public class MainGameScreen : MonoBehaviour
     {
         _menuButtonCallback = () => OnClickMenuButton?.Invoke();
         _shopButtonCallback = () => OnClickShopButton?.Invoke();
+        
         clickButton.onClick.AddListener(ControllerClick);
-        MenuButton.onClick.AddListener(_menuButtonCallback);
-        ShopButton.onClick.AddListener(_shopButtonCallback);
+        
+        menuButton.onClick.AddListener(_menuButtonCallback);
+        shopButton.onClick.AddListener(_shopButtonCallback);
     }
 
     private void OnDisable()
     {
         clickButton.onClick.RemoveAllListeners();
-        MenuButton.onClick.RemoveAllListeners();
-        ShopButton.onClick.RemoveAllListeners();
+        menuButton.onClick.RemoveAllListeners();
+        shopButton.onClick.RemoveAllListeners();
         _menuButtonCallback = null;
         _shopButtonCallback = null;
     }
