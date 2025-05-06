@@ -1,17 +1,14 @@
+using UI;
+
 public class AbstractModel
 {
-    protected View _view;
+    protected ScoreView scoreView;
     protected int _score;
 
-    public AbstractModel(View view)
+    public AbstractModel(ScoreView scoreView)
     {
-        _view = view;
+        this.scoreView = scoreView;
         _score = 0;
     }
-
-    public void SetScore(int newScore)
-    {
-        _score += newScore;
-        _view.ViewScore(_score);
-    }
+    
 }

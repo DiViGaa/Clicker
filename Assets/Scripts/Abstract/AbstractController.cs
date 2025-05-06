@@ -1,17 +1,17 @@
-
-public class AbstractController
+ 
+namespace Abstract
 {
-    protected AbstractView _view;
-    protected AbstractModel _model;
-
-    public AbstractController(AbstractView view, AbstractModel model)
+    public class AbstractController
     {
-        _view = view;
-        _model = model;
-    }
+        protected Dialog _view;
+        protected Model _model;
 
-    public void Click()
-    {
-        _model.SetScore(1);
+        public AbstractController(Dialog view, Model model)
+        {
+            _view = view;
+            _model = model;
+        }
+
+        
     }
 }
