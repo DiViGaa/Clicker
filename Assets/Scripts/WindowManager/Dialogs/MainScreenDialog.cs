@@ -9,7 +9,7 @@ namespace WindowManager.Dialogs
 {
     public class MainScreenDialog : Dialog, IDisposable
     {
-        [FormerlySerializedAs("view")] [SerializeField] private ScoreView scoreView;
+        [SerializeField] private ScoreView scoreView;
         [SerializeField] private Button clickButton;
         [SerializeField] private Button menuButton;
         [SerializeField] private Button shopButton;
