@@ -1,8 +1,8 @@
 using UI;
 
-public class Model : AbstractModel
+public class ScoreModel : AbstractModel
 {
-    public Model(ScoreView scoreView) : base(scoreView)
+    public ScoreModel(ScoreView scoreView) : base(scoreView)
     {
         
     }

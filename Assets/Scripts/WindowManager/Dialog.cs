@@ -1,28 +1,38 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Dialog : MonoBehaviour
+namespace WindowManager
 {
-    [SerializeField] private Button _outsideClickArea;
-
-    protected virtual void Awake()
+    public class Dialog : MonoBehaviour, IDisposable
     {
-        if (_outsideClickArea != null)
+        [SerializeField] private Button _outsideClickArea;
+
+        protected virtual void Awake()
         {
-            _outsideClickArea.onClick.AddListener(Hide);
+            if (_outsideClickArea != null)
+            {
+                _outsideClickArea.onClick.AddListener(Hide);
+            }
         }
-    }
 
-    protected void Hide()
-    {
-        Destroy(gameObject);
-    }
-
-    protected void OnDestroy()
-    {
-        if (_outsideClickArea != null)
+        protected void Hide()
         {
-            _outsideClickArea.onClick.RemoveAllListeners();
+            Dispose();
+            Destroy(gameObject);
+        }
+
+        protected void OnDestroy()
+        {
+            if (_outsideClickArea != null)
+            {
+                _outsideClickArea.onClick.RemoveAllListeners();
+            }
+        }
+
+        public virtual void Dispose()
+        {
+        
         }
     }
 }

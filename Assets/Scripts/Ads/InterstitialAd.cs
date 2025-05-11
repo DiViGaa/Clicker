@@ -3,13 +3,13 @@ using UnityEngine.Advertisements;
 
 namespace Ads
 {
-    public class InterstitialAd : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListener
+    public class InterstitialAd : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListener, IService
     {
         [SerializeField] string _androidAdUnitId = "Interstitial_Android";
         [SerializeField] string _iOSAdUnitId = "Interstitial_iOS";
         string _adUnitId;
 
-        void Awake()
+        public void Initialize()
         {
             // Get the Ad Unit ID for the current platform:
             _adUnitId = (Application.platform == RuntimePlatform.IPhonePlayer)

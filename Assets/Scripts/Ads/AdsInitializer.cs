@@ -3,19 +3,15 @@ using UnityEngine.Advertisements;
 
 namespace Ads
 {
-    public class AdsInitializer : MonoBehaviour, IUnityAdsInitializationListener
+    public class AdsInitializer : MonoBehaviour, IUnityAdsInitializationListener, IService
     {
-        [SerializeField] string _androidGameId;
-        [SerializeField] string _iOSGameId;
         [SerializeField] bool _testMode = true;
+        
+        private readonly string _androidGameId = "5843529";
+        private readonly string _iOSGameId = "5843528";
         private string _gameId;
  
-        void Awake()
-        {
-            InitializeAds();
-        }
- 
-        public void InitializeAds()
+        public void Initialize()
         {
 #if UNITY_IOS
             _gameId = _iOSGameId;

@@ -1,13 +1,10 @@
-using System;
-using Abstract;
 using UI;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace WindowManager.Dialogs
 {
-    public class MainScreenDialog : Dialog, IDisposable
+    public class MainScreenDialog : Dialog
     {
         [SerializeField] private ScoreView scoreView;
         [SerializeField] private Button clickButton;
@@ -16,10 +13,10 @@ namespace WindowManager.Dialogs
         
         private Controller _controller;
         
-        public void Init()
+        public void Initialize()
         {
-            Model model = new Model(scoreView);
-            _controller = new Controller(scoreView, model);
+            ScoreModel scoreModel = new ScoreModel(scoreView);
+            _controller = new Controller(scoreView, scoreModel);
 
             menuButton.onClick.AddListener(MenuScreenDialog);
             shopButton.onClick.AddListener(ShopScreenDialog);
@@ -29,14 +26,14 @@ namespace WindowManager.Dialogs
 
         private void ShopScreenDialog()
         {
-             var dialog = WindowManager.DialogManager.ShowDialog<ShopScreenDialog>();
-             
+             var dialog = DialogManager.ShowDialog<ShopScreenDialog>();
+             dialog.Initialize();
              Hide();
         }
 
         private void MenuScreenDialog()
         {
-            var dialog = WindowManager.DialogManager.ShowDialog<MenuScreenDialog>();
+            var dialog = DialogManager.ShowDialog<MenuScreenDialog>();
             
              Hide();
         }
@@ -45,10 +42,8 @@ namespace WindowManager.Dialogs
         {
             _controller.Click();
         }
-
-        private void OnDisable() => Dispose();
-
-        public void Dispose()
+        
+        public override void Dispose()
         {
             clickButton.onClick.RemoveAllListeners();
             menuButton.onClick.RemoveAllListeners();
