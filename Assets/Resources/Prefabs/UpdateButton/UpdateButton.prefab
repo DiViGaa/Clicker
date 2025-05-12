@@ -280,6 +280,7 @@ GameObject:
   - component: {fileID: 2446905912465601066}
   - component: {fileID: 212721223407443656}
   - component: {fileID: 6170292152387133817}
+  - component: {fileID: 8286111231486258539}
   m_Layer: 5
   m_Name: UpdateButton
   m_TagString: Untagged
@@ -390,3 +391,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8286111231486258539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5692571445924481768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d732714f60cbb13408ffe9b73baf17bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgradeButton: {fileID: 6170292152387133817}
+  upgradeImage: {fileID: 0}

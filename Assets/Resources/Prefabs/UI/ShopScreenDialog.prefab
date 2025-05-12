@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 8625662139155326272}
   - component: {fileID: 6329647092219700325}
   - component: {fileID: 5089569325996162151}
+  - component: {fileID: 1540152663121851454}
   m_Layer: 5
   m_Name: MultiTapButton
   m_TagString: Untagged
@@ -242,6 +243,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1540152663121851454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476895243407414752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d732714f60cbb13408ffe9b73baf17bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgradeButton: {fileID: 5089569325996162151}
+  upgradeImage: {fileID: 6329647092219700325}
 --- !u!1 &2414216570485044182
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,6 +403,7 @@ GameObject:
   - component: {fileID: 7608420493027208920}
   - component: {fileID: 6034475778364209538}
   - component: {fileID: 5369037100300883949}
+  - component: {fileID: 2716347250249063340}
   m_Layer: 5
   m_Name: 'AutoTapButton '
   m_TagString: Untagged
@@ -498,6 +514,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2716347250249063340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2614242660139459176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d732714f60cbb13408ffe9b73baf17bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgradeButton: {fileID: 5369037100300883949}
+  upgradeImage: {fileID: 6034475778364209538}
 --- !u!1 &2825149520088297947
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,6 +939,7 @@ GameObject:
   - component: {fileID: 5844212905700451800}
   - component: {fileID: 452992638868603667}
   - component: {fileID: 3078625666193158289}
+  - component: {fileID: 4703469907088938727}
   m_Layer: 5
   m_Name: EuroButton
   m_TagString: Untagged
@@ -1019,6 +1050,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4703469907088938727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6112982101652295640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d732714f60cbb13408ffe9b73baf17bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgradeButton: {fileID: 3078625666193158289}
+  upgradeImage: {fileID: 452992638868603667}
 --- !u!1 &6804551515342903209
 GameObject:
   m_ObjectHideFlags: 0

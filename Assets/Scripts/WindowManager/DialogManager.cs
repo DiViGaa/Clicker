@@ -16,6 +16,7 @@ namespace WindowManager
             {typeof(MainScreenDialog), "MainScreenDialog" },
             {typeof(MenuScreenDialog), "MenuScreenDialog" },
             {typeof(ShopScreenDialog), "ShopScreenDialog" },
+            {typeof(UpgradeDialog), "UpgradeDialog"},
             
         };
 
