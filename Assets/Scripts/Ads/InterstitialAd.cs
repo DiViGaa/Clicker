@@ -3,11 +3,11 @@ using UnityEngine.Advertisements;
 
 namespace Ads
 {
-    public class InterstitialAd : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListener, IService
+    public class InterstitialAd : IUnityAdsLoadListener, IUnityAdsShowListener, IService
     {
-        [SerializeField] string _androidAdUnitId = "Interstitial_Android";
-        [SerializeField] string _iOSAdUnitId = "Interstitial_iOS";
-        string _adUnitId;
+        private string _androidAdUnitId = "Interstitial_Android";
+        private string _iOSAdUnitId = "Interstitial_iOS";
+        private string _adUnitId;
 
         public void Initialize()
         {

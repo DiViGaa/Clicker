@@ -3,9 +3,9 @@ using UnityEngine.Advertisements;
 
 namespace Ads
 {
-    public class AdsInitializer : MonoBehaviour, IUnityAdsInitializationListener, IService
+    public class AdsInitializer : IUnityAdsInitializationListener, IService
     {
-        [SerializeField] bool _testMode = true;
+        private bool _testMode = true;
         
         private readonly string _androidGameId = "5843529";
         private readonly string _iOSGameId = "5843528";

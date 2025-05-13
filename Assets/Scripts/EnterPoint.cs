@@ -9,12 +9,15 @@ using WindowManager.Dialogs;
 public class EnterPoint : MonoBehaviour,IDisposable
 {
     [SerializeField] private GUIHolder guiHolder;
-    [SerializeField] private AdsInitializer  adsInitializer;
-    [SerializeField] private InterstitialAd interstitialAd;
+    private AdsInitializer  _adsInitializer;
+    private InterstitialAd _interstitialAd;
     
     private MainScreenDialog _mainScreenDialog;
     private void Start()
     {
+        _adsInitializer = new AdsInitializer();
+        _interstitialAd = new InterstitialAd();
+        
         Register();
         CreateMainScreenDialog();
         Initialize();
@@ -31,14 +34,14 @@ public class EnterPoint : MonoBehaviour,IDisposable
         ServiceLocator.Initialize();
         
         ServiceLocator.Current.Register<GUIHolder>(guiHolder);
-        ServiceLocator.Current.Register<AdsInitializer>(adsInitializer);
-        ServiceLocator.Current.Register<InterstitialAd>(interstitialAd);
+        ServiceLocator.Current.Register<AdsInitializer>(_adsInitializer);
+        ServiceLocator.Current.Register<InterstitialAd>(_interstitialAd);
     }
 
     private void Initialize()
     {
-        adsInitializer.Initialize();
-        interstitialAd.Initialize();
+        _adsInitializer.Initialize();
+        _interstitialAd.Initialize();
     }
 
     private void OnDisable() => Dispose();
