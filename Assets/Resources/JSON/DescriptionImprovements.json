@@ -1,5 +1,33 @@
-﻿{
-  "multitap": "Every click you make becomes more powerful! Increases the number of points you get per click.",
-  "autotap": "Tired of clicking manually? This modification clicks for you - regularly adds points even without your participation.",
-  "euro": "Premium investment! Buy once - immediately get a large increase in points. No obligations, only benefits."
-}
+﻿[
+  {
+    "name": "multitap",
+    "id": 0,
+    "coast": 10,
+    "minLvl": 1,
+    "maxLvl": 10,
+    "currentLvl": 1,
+    "isBuyed": false,
+    "description": "Every click you make becomes more powerful! Increases the number of points you get per click."
+  },
+  {
+    "name": "autotap",
+    "id": 1,
+    "coast": 10,
+    "minLvl": 1,
+    "maxLvl": 10,
+    "currentLvl": 1,
+    "isBuyed": false,
+    "description": "Tired of clicking manually? This modification clicks for you - regularly adds points even without your participation."
+  },
+  {
+    "name": "euro",
+    "id": 2,
+    "coast": 10,
+    "minLvl": 1,
+    "maxLvl": 10,
+    "currentLvl": 1,
+    "isBuyed": false,
+    "description": "Premium investment! Buy once - immediately get a large increase in points. No obligations, only benefits"
+  }
+]
+  

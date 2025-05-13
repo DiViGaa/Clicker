@@ -1,14 +1,17 @@
 using UI;
 
-public class AbstractModel
+namespace Abstract
 {
-    protected ScoreView scoreView;
-    protected int _score;
-
-    public AbstractModel(ScoreView scoreView)
+    public class AbstractModel
     {
-        this.scoreView = scoreView;
-        _score = 0;
-    }
+        protected ScoreView scoreView;
+        protected int _score;
+
+        public AbstractModel(ScoreView scoreView)
+        {
+            this.scoreView = scoreView;
+            _score = 0;
+        }
     
+    }
 }

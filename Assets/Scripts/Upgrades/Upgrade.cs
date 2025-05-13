@@ -1,30 +1,17 @@
-using System;
 using UnityEngine;
-using UnityEngine.UI;
-using WindowManager;
-using WindowManager.Dialogs;
 
 namespace Upgrades
 {
-    public class Upgrade : MonoBehaviour, IDisposable
+    public class Upgrade : MonoBehaviour
     {
-        [SerializeField] private Button upgradeButton;
-        [SerializeField] private Image upgradeImage;
-        
-        public void Initialize()
-        {
-            upgradeButton.onClick.AddListener(ShowUpgradeInfo);
-        }
+        private string _name;
+        private string _description;
+        private int _id;
+        private int _cost;
+        private int _minLevel;
+        private int _maxLevel;
+        private int _currentLevel;
+        private bool _isBuyed;
 
-        private void ShowUpgradeInfo()
-        {
-            var dialog =  DialogManager.ShowDialog<UpgradeDialog>();
-            dialog.Initialize(upgradeImage);
-        }
-        
-        public void Dispose()
-        {
-            upgradeButton.onClick.RemoveListener(ShowUpgradeInfo);
-        }
     }
 }

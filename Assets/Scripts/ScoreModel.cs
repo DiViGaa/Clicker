@@ -1,3 +1,4 @@
+using Abstract;
 using UI;
 
 public class ScoreModel : AbstractModel

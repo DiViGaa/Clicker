@@ -1,3 +1,4 @@
+using Locator;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,8 +15,15 @@ namespace WindowManager.Dialogs
 
         public void Initialize(Image upgradeImage)
         {
-            closeButton.onClick.AddListener(Hide); 
+            closeButton.onClick.AddListener(HideDialog); 
             this.upgradeImage.sprite = upgradeImage.sprite;
+        }
+
+        private void HideDialog()
+        {
+            Hide();
+            var dialog = DialogManager.ShowDialog<ShopScreenDialog>();
+            dialog.Initialize();
         }
     }
 }

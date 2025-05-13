@@ -13,7 +13,7 @@ namespace WindowManager.Dialogs
        
        [SerializeField] private GridLayoutGroup gridLayoutGroup;
        
-       private Upgrade[] _upgrades;
+       private UpgradeButton[] _upgrades;
 
        public void Initialize()
        {
@@ -26,12 +26,15 @@ namespace WindowManager.Dialogs
        private void InitializeUpgrades()
        {
            foreach (var upgrade in _upgrades)
+           {
                upgrade.Initialize();
+               upgrade.AddListener(Hide);
+           }
        }
 
        private void FillGridList()
        {
-           _upgrades = gridLayoutGroup.gameObject.GetComponentsInChildren<Upgrade>();
+           _upgrades = gridLayoutGroup.gameObject.GetComponentsInChildren<UpgradeButton>();
        }
 
        private void BackToMainScreen()
