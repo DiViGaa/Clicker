@@ -404,4 +404,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeButton: {fileID: 6170292152387133817}
-  upgradeImage: {fileID: 0}
+  upgradeImage: {fileID: 212721223407443656}
+  upgradeNameText: {fileID: 4575957609139348218}
+  costText: {fileID: 3797104941315888663}

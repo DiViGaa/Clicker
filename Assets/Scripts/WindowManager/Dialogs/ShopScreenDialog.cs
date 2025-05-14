@@ -1,6 +1,7 @@
 using Ads;
 using Locator;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using Upgrades;
 
@@ -13,30 +14,21 @@ namespace WindowManager.Dialogs
        
        [SerializeField] private GridLayoutGroup gridLayoutGroup;
        
+       [SerializeField] private GameObject upgradeParent;
+       
        private UpgradeButton[] _upgrades;
+
+       public static UnityAction OnCloseDialog; //TEMP
 
        public void Initialize()
        {
            backButton.onClick.AddListener(BackToMainScreen);
            addButton.onClick.AddListener(ShowAdd);
-           FillGridList();
-           InitializeUpgrades();
+           ServiceLocator.Current.Get<UpgradeCreator>().CreateUpgradeButtons(upgradeParent);
+           OnCloseDialog += Hide; //TEMP
        }
 
-       private void InitializeUpgrades()
-       {
-           foreach (var upgrade in _upgrades)
-           {
-               upgrade.Initialize();
-               upgrade.AddListener(Hide);
-           }
-       }
-
-       private void FillGridList()
-       {
-           _upgrades = gridLayoutGroup.gameObject.GetComponentsInChildren<UpgradeButton>();
-       }
-
+       
        private void BackToMainScreen()
        {
            var dialog = DialogManager.ShowDialog<MainScreenDialog>();
@@ -53,13 +45,8 @@ namespace WindowManager.Dialogs
        {
            backButton.onClick.RemoveListener(BackToMainScreen);
            addButton.onClick.RemoveAllListeners();
-           DisposeUpgrades();
+           OnCloseDialog -= Hide; //TEMP
        }
-
-       private void DisposeUpgrades()
-       {
-           foreach (var upgrade in _upgrades)
-               upgrade.Dispose();
-       }
+       
     }
 }

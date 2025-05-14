@@ -4,8 +4,6 @@ using UnityEngine;
 using Upgrades;
 using File = System.IO.File;
 
-
-
 namespace JSON
 {
     public static class JsonUpgradeReader
@@ -13,7 +11,7 @@ namespace JSON
         public static List<Upgrade> LoadJson(string fileName)
         {
             string url = string.Empty;
-            url = "file://" + Application.dataPath + "/Resources/JSON/" + fileName;
+            url = Application.dataPath + "/Resources/JSON/" + fileName;
 
             string json = File.ReadAllText(url);
             

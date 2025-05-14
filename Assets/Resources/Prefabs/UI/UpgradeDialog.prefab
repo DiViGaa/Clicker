@@ -682,7 +682,7 @@ MonoBehaviour:
   closeButton: {fileID: 6511865766456152895}
   buyButton: {fileID: 3956648809036810032}
   lvlText: {fileID: 3470188179054739093}
-  detailsText: {fileID: 9059054645171158565}
+  detailsText: {fileID: 2865228527165578527}
   upgradeImage: {fileID: 4257092369151051139}
 --- !u!1 &6864676636082821710
 GameObject:

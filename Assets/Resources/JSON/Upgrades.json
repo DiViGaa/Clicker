@@ -1,0 +1,36 @@
+﻿[
+  {
+    "Name": "multitap",
+    "Description": "Every click you make becomes more powerful! Increases the number of points you get per click.",
+    "Id": 0,
+    "Cost": 10,
+    "MinLevel": 1,
+    "MaxLevel": 10,
+    "CurrentLevel": 1,
+    "IsBuyed": false,
+    "ImageName": "Image/MultiTap"
+  },
+  {
+    "name": "autotap",
+    "description": "Tired of clicking manually? This modification clicks for you - regularly adds points even without your participation.",
+    "Id": 1,
+    "Cost": 10,
+    "MinLevel": 1,
+    "MaxLevel": 10,
+    "CurrentLevel": 1,
+    "IsBuyed": false,
+    "ImageName": "Image/AutoTap"
+  },
+  {
+    "name": "euro",
+    "description": "Premium investment! Buy once - immediately get a large increase in points. No obligations, only benefits",
+    "Id": 2,
+    "Cost": 10,
+    "MinLevel": 1,
+    "MaxLevel": 10,
+    "CurrentLevel": 1,
+    "IsBuyed": false,
+    "ImageName": "Image/Euro"
+  }
+]
+  

@@ -2,6 +2,7 @@ using Locator;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Upgrades;
 
 namespace WindowManager.Dialogs
 {
@@ -13,10 +14,13 @@ namespace WindowManager.Dialogs
         [SerializeField] private TextMeshProUGUI detailsText;
         [SerializeField] private Image upgradeImage;
 
-        public void Initialize(Image upgradeImage)
+        public void Initialize(Image upgradeImage, Upgrade upgrade)
         {
             closeButton.onClick.AddListener(HideDialog); 
             this.upgradeImage.sprite = upgradeImage.sprite;
+            lvlText.text = upgrade.CurrentLevel.ToString();
+            detailsText.text = upgrade.Description;
+            
         }
 
         private void HideDialog()
