@@ -7,7 +7,8 @@
     "maxLvl": 10,
     "currentLvl": 1,
     "isBuyed": false,
-    "description": "Every click you make becomes more powerful! Increases the number of points you get per click."
+    "description": "Every click you make becomes more powerful! Increases the number of points you get per click.",
+    "imagePath": "Assets/Resources/Image/MultiTap.png"
   },
   {
     "name": "autotap",
@@ -17,7 +18,8 @@
     "maxLvl": 10,
     "currentLvl": 1,
     "isBuyed": false,
-    "description": "Tired of clicking manually? This modification clicks for you - regularly adds points even without your participation."
+    "description": "Tired of clicking manually? This modification clicks for you - regularly adds points even without your participation.",
+    "imagePath": "Assets/Resources/Image/AutoTap.png"
   },
   {
     "name": "euro",
@@ -27,7 +29,8 @@
     "maxLvl": 10,
     "currentLvl": 1,
     "isBuyed": false,
-    "description": "Premium investment! Buy once - immediately get a large increase in points. No obligations, only benefits"
+    "description": "Premium investment! Buy once - immediately get a large increase in points. No obligations, only benefits",
+    "imagePath": "Assets/Resources/Image/Euro.png"
   }
 ]
   
