@@ -1,3 +1,4 @@
+using LocalizationTool;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,17 +19,27 @@ namespace WindowManager.Dialogs
 
         private void SwitchToUSA()
         {
-            throw new System.NotImplementedException();
+            LocalizationSystem.SwitchLanguage(LocalizationSystem.Language.English);
+            ReloadSettings();
+
         }
 
         private void SwitchToUa()
         {
-            throw new System.NotImplementedException();
+            LocalizationSystem.SwitchLanguage(LocalizationSystem.Language.Ukrainian);
+            ReloadSettings();
+        }
+
+        private void ReloadSettings()
+        {
+            var dialog = DialogManager.ShowDialog<SettingDialog>();
+            dialog.Initialize();
+            Hide();
         }
 
         private void BackToSetting()
         {
-            var dialog = DialogManager.ShowDialog<SettingDialog>();
+            var dialog = DialogManager.ShowDialog<MenuScreenDialog>();
             dialog.Initialize();
             Hide();
         }

@@ -10,7 +10,7 @@ namespace LocalizationTool
            English
        }
        
-       public static Language CurrentLanguage = Language.Ukrainian;
+       private static Language CurrentLanguage = Language.Ukrainian;
        
        private static Dictionary<string, string> _localizedUA;
        private static Dictionary<string, string> _localizedEN;
@@ -26,6 +26,11 @@ namespace LocalizationTool
            _localizedUA = loader.GetDictionaryValues("ua");
            
            _isInitialized = true;
+       }
+
+       public static void SwitchLanguage(Language language)
+       {
+           CurrentLanguage  = language;
        }
 
        public static string GetLocalizedString(string key)

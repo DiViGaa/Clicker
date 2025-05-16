@@ -14,8 +14,6 @@ namespace Upgrades
         public int CurrentLevel {get; set;}
         public bool IsBuyed {get; set;}
         public string ImageName {get; set;}
-
-        
-        
+        public string LocalizationKey {get; set;}
     }
 }

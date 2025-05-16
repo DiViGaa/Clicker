@@ -12,7 +12,15 @@ namespace WindowManager.Dialogs
         public void Initialize()
         {
             resumeButton.onClick.AddListener(BackToMainScreen);
+            settingButton.onClick.AddListener(ShowSettings);
             exitButton.onClick.AddListener(Exit);
+        }
+
+        private void ShowSettings()
+        {
+            var dialog = DialogManager.ShowDialog<SettingDialog>();
+            dialog.Initialize();
+            Hide();
         }
 
         private void BackToMainScreen()

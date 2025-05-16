@@ -14,5 +14,10 @@ namespace LocalizationTool
             var value = LocalizationSystem.GetLocalizedString(key);
             _textMeshProUGUI.text = value;
         }
+
+        public void SetKey(string key)
+        {
+            this.key = key;
+        }
     }
 }

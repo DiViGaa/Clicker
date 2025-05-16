@@ -8,7 +8,8 @@
     "MaxLevel": 10,
     "CurrentLevel": 1,
     "IsBuyed": false,
-    "ImageName": "Image/MultiTap"
+    "ImageName": "Image/MultiTap",
+    "LocalizationKey": "descriptionMultitap"
   },
   {
     "name": "autotap",
@@ -19,7 +20,8 @@
     "MaxLevel": 10,
     "CurrentLevel": 1,
     "IsBuyed": false,
-    "ImageName": "Image/AutoTap"
+    "ImageName": "Image/AutoTap",
+    "LocalizationKey": "descriptionAutotap"
   },
   {
     "name": "euro",
@@ -30,7 +32,8 @@
     "MaxLevel": 10,
     "CurrentLevel": 1,
     "IsBuyed": false,
-    "ImageName": "Image/Euro"
+    "ImageName": "Image/Euro",
+    "LocalizationKey": "descriptioneuro"
   }
 ]
   

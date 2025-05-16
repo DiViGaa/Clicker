@@ -309,6 +309,7 @@ GameObject:
   - component: {fileID: 4312767144472232791}
   - component: {fileID: 8428745445172256321}
   - component: {fileID: 6496445058887440053}
+  - component: {fileID: 4316469082576248334}
   m_Layer: 5
   m_Name: BackToMenuText
   m_TagString: Untagged
@@ -432,6 +433,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &4316469082576248334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2364172174809225716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbcc66bdf80e679459e7946ce6101641, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: backToMenu
 --- !u!1 &2487095098406906847
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,6 +695,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _outsideClickArea: {fileID: 0}
+  uabutton: {fileID: 6715135451842530025}
+  usabutton: {fileID: 8957400463037752755}
+  backToSettingbutton: {fileID: 5583246980734562514}
 --- !u!1 &3909712921425758896
 GameObject:
   m_ObjectHideFlags: 0
@@ -1262,6 +1279,7 @@ GameObject:
   - component: {fileID: 776638079132963520}
   - component: {fileID: 4733927938659557756}
   - component: {fileID: 5407852131411083887}
+  - component: {fileID: 5250982076911878875}
   m_Layer: 5
   m_Name: EnglishText
   m_TagString: Untagged
@@ -1285,7 +1303,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: -16.5}
+  m_AnchoredPosition: {x: 0, y: -59}
   m_SizeDelta: {x: 0, y: 222}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4733927938659557756
@@ -1316,9 +1334,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '
-
-    English'
+  m_text: English
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1387,6 +1403,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5250982076911878875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6428952455976593883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbcc66bdf80e679459e7946ce6101641, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: en
 --- !u!1 &6461108653122199582
 GameObject:
   m_ObjectHideFlags: 0
@@ -1760,6 +1789,7 @@ GameObject:
   - component: {fileID: 5983231014680609350}
   - component: {fileID: 6738815410467756635}
   - component: {fileID: 7882018687007244452}
+  - component: {fileID: 6565040556099273173}
   m_Layer: 5
   m_Name: UAText
   m_TagString: Untagged
@@ -1783,7 +1813,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: -22.000008}
+  m_AnchoredPosition: {x: 0, y: -59}
   m_SizeDelta: {x: 0, y: 222}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6738815410467756635
@@ -1814,9 +1844,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '
-
-    Ukrainian'
+  m_text: Ukrainian
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1885,6 +1913,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6565040556099273173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8317350443148727599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbcc66bdf80e679459e7946ce6101641, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: ua
 --- !u!1 &8770457666119786717
 GameObject:
   m_ObjectHideFlags: 0
