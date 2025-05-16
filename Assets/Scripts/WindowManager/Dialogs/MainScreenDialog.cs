@@ -34,7 +34,7 @@ namespace WindowManager.Dialogs
         private void MenuScreenDialog()
         {
             var dialog = DialogManager.ShowDialog<MenuScreenDialog>();
-            
+            dialog.Initialize();
              Hide();
         }
         

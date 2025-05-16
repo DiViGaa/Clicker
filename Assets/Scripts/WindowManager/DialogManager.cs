@@ -17,7 +17,7 @@ namespace WindowManager
             {typeof(MenuScreenDialog), "MenuScreenDialog" },
             {typeof(ShopScreenDialog), "ShopScreenDialog" },
             {typeof(UpgradeDialog), "UpgradeDialog"},
-            
+            {typeof(SettingDialog), "SettingDialog"}
         };
 
         public static T ShowDialog<T>() where T : Dialog
