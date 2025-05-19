@@ -1,5 +1,6 @@
 using Ads;
 using Locator;
+using Sound;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -32,6 +33,7 @@ namespace WindowManager.Dialogs
        private void BackToMainScreen()
        {
            var dialog = DialogManager.ShowDialog<MainScreenDialog>();
+           ServiceLocator.Current.Get<SoundManager>().PlaySound("ui", "UI");
            dialog.Initialize();
            Hide();
        }
@@ -39,6 +41,7 @@ namespace WindowManager.Dialogs
        private void ShowAdd()
        {
            ServiceLocator.Current.Get<InterstitialAd>().ShowAd();
+           ServiceLocator.Current.Get<SoundManager>().PlaySound("ui", "UI");
        }
        
        public override void Dispose()

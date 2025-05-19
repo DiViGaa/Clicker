@@ -1,4 +1,8 @@
+using JSON;
 using LocalizationTool;
+using Locator;
+using Setting;
+using Sound;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,24 +13,48 @@ namespace WindowManager.Dialogs
 		[SerializeField] private Button uabutton;
         [SerializeField] private Button usabutton;
         [SerializeField] private Button backToSettingbutton;
+        [SerializeField] private Slider soundSlider;
+        [SerializeField] private Slider musicSlider;
 
         public void Initialize()
         {
-            uabutton.onClick.AddListener(SwitchToUa);
-            usabutton.onClick.AddListener(SwitchToUSA);
-            backToSettingbutton.onClick.AddListener(BackToSetting);
+            uabutton.onClick.AddListener(SwitchToUaButton);
+            usabutton.onClick.AddListener(SwitchToEnButton);
+            backToSettingbutton.onClick.AddListener(BackToMenu);
+            
+            SetSliderVolume();
+            
+            soundSlider.onValueChanged.AddListener(ChangeUiSlider);
+            musicSlider.onValueChanged.AddListener(ChangeMusicSlider);
         }
 
-        private void SwitchToUSA()
+        private void ChangeUiSlider(float value)
         {
-            LocalizationSystem.SwitchLanguage(LocalizationSystem.Language.English);
+            ServiceLocator.Current.Get<SettingManager>().SetUiVolume(value);
+        }
+
+        private void ChangeMusicSlider(float value)
+        {
+            ServiceLocator.Current.Get<SettingManager>().SetMusicVolume(value);
+        }
+
+        private void SetSliderVolume()
+        {
+            soundSlider.value = ServiceLocator.Current.Get<SoundManager>().UIVolume;
+            musicSlider.value = ServiceLocator.Current.Get<SoundManager>().MusicVolume;
+        }
+
+        private void SwitchToEnButton()
+        {
+            LocalizationSystem.SetLanguageByEnum(LocalizationSystem.Language.English);
+            ServiceLocator.Current.Get<SettingManager>().SwitchLanguage(1);
             ReloadSettings();
-
         }
 
-        private void SwitchToUa()
+        private void SwitchToUaButton()
         {
-            LocalizationSystem.SwitchLanguage(LocalizationSystem.Language.Ukrainian);
+            ServiceLocator.Current.Get<SettingManager>().SwitchLanguage(0);
+            ServiceLocator.Current.Get<SoundManager>().PlaySound("ui", "UI");
             ReloadSettings();
         }
 
@@ -37,9 +65,11 @@ namespace WindowManager.Dialogs
             Hide();
         }
 
-        private void BackToSetting()
+        private void BackToMenu()
         {
             var dialog = DialogManager.ShowDialog<MenuScreenDialog>();
+            ServiceLocator.Current.Get<SoundManager>().PlaySound("ui", "UI");
+            ServiceLocator.Current.Get<SettingManager>().Save();
             dialog.Initialize();
             Hide();
         }

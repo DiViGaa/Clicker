@@ -9,7 +9,7 @@ namespace Upgrades
         private List<Upgrade> upgrades =  new List<Upgrade>();
         private string UpgradesPath => "Prefabs/UpdateButton/UpdateButton";
 
-        public void Init()
+        public void Initialize()
         {
             var upgrades = JsonUpgradeReader.LoadJson("Upgrades.json");
 

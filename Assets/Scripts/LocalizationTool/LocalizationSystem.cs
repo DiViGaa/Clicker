@@ -1,13 +1,14 @@
+using System;
 using System.Collections.Generic;
 
 namespace LocalizationTool
 {
     public class LocalizationSystem
     {
-       public enum Language
+       public enum Language : int
        {
-           Ukrainian,
-           English
+           Ukrainian = 0,
+           English = 1
        }
        
        private static Language CurrentLanguage = Language.Ukrainian;
@@ -28,9 +29,19 @@ namespace LocalizationTool
            _isInitialized = true;
        }
 
-       public static void SwitchLanguage(Language language)
+       public static void SetLanguageByEnum(Language language)
        {
            CurrentLanguage  = language;
+       }
+
+       public static void SetLanguageByIndex(int index)
+       {
+           Array values = Enum.GetValues(typeof(Language));
+
+           if (index >= 0 && index < values.Length)
+           {
+               CurrentLanguage = (Language)values.GetValue(index);
+           }
        }
 
        public static string GetLocalizedString(string key)

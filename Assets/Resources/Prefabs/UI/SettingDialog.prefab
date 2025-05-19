@@ -85,8 +85,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 4836870718244868984}
   m_HandleRect: {fileID: 429082172709288375}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 0
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -698,6 +698,8 @@ MonoBehaviour:
   uabutton: {fileID: 6715135451842530025}
   usabutton: {fileID: 8957400463037752755}
   backToSettingbutton: {fileID: 5583246980734562514}
+  soundSlider: {fileID: 1521868554701196631}
+  musicSlider: {fileID: 4971384604553543822}
 --- !u!1 &3909712921425758896
 GameObject:
   m_ObjectHideFlags: 0
@@ -1676,8 +1678,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 6144243203705369996}
   m_HandleRect: {fileID: 6714990043970508880}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 0
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:

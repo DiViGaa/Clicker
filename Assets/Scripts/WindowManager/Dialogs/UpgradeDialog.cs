@@ -1,5 +1,6 @@
 using LocalizationTool;
 using Locator;
+using Sound;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -29,6 +30,7 @@ namespace WindowManager.Dialogs
         {
             Hide();
             var dialog = DialogManager.ShowDialog<ShopScreenDialog>();
+            ServiceLocator.Current.Get<SoundManager>().PlaySound("ui", "UI");
             dialog.Initialize();
         }
     }

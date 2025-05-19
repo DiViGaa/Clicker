@@ -1,3 +1,5 @@
+using Locator;
+using Sound;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,6 +21,7 @@ namespace WindowManager.Dialogs
         private void ShowSettings()
         {
             var dialog = DialogManager.ShowDialog<SettingDialog>();
+            ServiceLocator.Current.Get<SoundManager>().PlaySound("ui", "UI");
             dialog.Initialize();
             Hide();
         }
@@ -26,6 +29,7 @@ namespace WindowManager.Dialogs
         private void BackToMainScreen()
         {
             var dialog = DialogManager.ShowDialog<MainScreenDialog>();
+            ServiceLocator.Current.Get<SoundManager>().PlaySound("ui", "UI");
             dialog.Initialize();
             Hide();
         }

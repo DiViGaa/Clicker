@@ -1,6 +1,9 @@
 using System;
 using Ads;
+using JSON;
 using Locator;
+using Setting;
+using Sound;
 using UI;
 using UnityEngine;
 using Upgrades;
@@ -13,6 +16,9 @@ public class EnterPoint : MonoBehaviour,IDisposable
     private AdsInitializer  _adsInitializer;
     private InterstitialAd _interstitialAd;
     private UpgradeCreator  _upgradeCreator;
+    private SoundManager  _soundManager;
+    private SettingManager  _settingManager;
+    private JsonSetting _settingData;
     
     private MainScreenDialog _mainScreenDialog;
     private void Start()
@@ -20,6 +26,9 @@ public class EnterPoint : MonoBehaviour,IDisposable
         _adsInitializer = new AdsInitializer();
         _interstitialAd = new InterstitialAd();
         _upgradeCreator = new UpgradeCreator();
+        _soundManager = new SoundManager();
+        _settingManager = new SettingManager(_soundManager);
+        _settingData = new JsonSetting();
         
         Register();
         CreateMainScreenDialog();
@@ -40,13 +49,19 @@ public class EnterPoint : MonoBehaviour,IDisposable
         ServiceLocator.Current.Register<AdsInitializer>(_adsInitializer);
         ServiceLocator.Current.Register<InterstitialAd>(_interstitialAd);
         ServiceLocator.Current.Register<UpgradeCreator>(_upgradeCreator);
+        ServiceLocator.Current.Register<SoundManager>(_soundManager);
+        ServiceLocator.Current.Register<SettingManager>(_settingManager);
+        ServiceLocator.Current.Register<JsonSetting>(_settingData);
+
     }
 
     private void Initialize()
     {
         _adsInitializer.Initialize();
         _interstitialAd.Initialize();
-        _upgradeCreator.Init();
+        _upgradeCreator.Initialize();
+        _settingManager.Initialize();
+        
     }
 
     private void OnDisable() => Dispose();

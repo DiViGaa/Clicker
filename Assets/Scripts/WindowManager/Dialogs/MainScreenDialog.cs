@@ -1,3 +1,5 @@
+using Locator;
+using Sound;
 using UI;
 using UnityEngine;
 using UnityEngine.UI;
@@ -29,18 +31,21 @@ namespace WindowManager.Dialogs
              var dialog = DialogManager.ShowDialog<ShopScreenDialog>();
              dialog.Initialize();
              Hide();
+             ServiceLocator.Current.Get<SoundManager>().PlaySound("ui", "UI");
         }
 
         private void MenuScreenDialog()
         {
             var dialog = DialogManager.ShowDialog<MenuScreenDialog>();
             dialog.Initialize();
-             Hide();
+            Hide();
+            ServiceLocator.Current.Get<SoundManager>().PlaySound("ui", "UI");
         }
         
         private void ControllerClick()
         {
             _controller.Click();
+            ServiceLocator.Current.Get<SoundManager>().PlaySound("ui", "UI");
         }
         
         public override void Dispose()
